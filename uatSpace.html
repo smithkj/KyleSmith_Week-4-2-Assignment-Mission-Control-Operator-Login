@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<!--Week 4-2 Assignment:  Mission Control Operator Login
+Kyle Smith
+Smithkj665@hotmail.com-->
+<html>
+
+<head>
+    <script src="code.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <title>
+        Kyle Smith's UATSpace Page
+    </title>
+</head>
+
+<body>
+    <!--Table to hold UAT Space logo and header text-->
+    <table>
+        <tr>
+            <td><img src="UATspaceLogo-2.jpg"></td>
+            <td>
+                <h1>
+                    UAT Space Program
+                </h1>
+            </td>
+        </tr>
+    </table>
+
+    <!--Data Table-->
+    <!--Table id and border and width-->
+    <table id="data" border="2" width="70%">
+        <!--collum width match-->
+        <!--Collum 1-->
+        <col style="width: 35%">
+        <!--Collum 2-->
+        <col style="width: 35%">
+        <!--Table header-->
+        <thead>
+            <!--Header Text 1-->
+            <th>
+                Data type
+            </th>
+            <!--Header Text 2-->
+            <th>
+                Reading
+            </th>
+        </thead>
+        <!--Table body information-->
+        <tbody>
+            <!--Table body information text-->
+            <tr id="seconds">
+                <!--Text row 1, line 1-->
+                <td>Time elapsed:</td>
+                <!--Text row 2, line 1-->
+                <td>15 seconds</td>
+            </tr>
+            <tr id="Latitude">
+                <!--Text row 1, line 2-->
+                <td>Latitude:</td>
+                <!--Text row 2, line 2-->
+                <td>0</td>
+            </tr>
+            <tr id="Longitude">
+                <!--Text row 1, line 3-->
+                <td>Longitude:</td>
+                <!--Text row 2, line 3-->
+                <td>0</td>
+            </tr>
+            <tr id="GPS_Altitude">
+                <!--Text row 1, line 4-->
+                <td>GPS Altitude:</td>
+                <!--Text row 2, line 4-->
+                <td>0</td>
+            </tr>
+            <tr id="BMP_Altitude">
+                <!--Text row 1, line 5-->
+                <td>BMP Altitude:</td>
+                <!--Text row 2, line 5-->
+                <td>30383.04</td>
+            </tr>
+            <tr id="BMP_Pressure">
+                <!--Text row 1, line 6-->
+                <td>BMP Pressure</td>
+                <!--Text row 2, line 6-->
+                <td>2.34</td>
+            </tr>
+            <tr id="BMP_Temperature">
+                <!--Text row 1, line 7-->
+                <td>BMP Temperature:</td>
+                <!--Text row 2, line 7-->
+                <td>0</td>
+            </tr>
+            <tr id="Dig_Temperature">
+                <!--Text row 1, line 8-->
+                <td>Digital Temperature:</td>
+                <!--Text row 2, line 8-->
+                <td>24.12</td>
+            </tr>
+            <tr id="CSS_Temperature">
+                <!--Text row 1, line 9-->
+                <td>CSS Temperature:</td>
+                <!--Text row 2, line 9-->
+                <td>25</td>
+            </tr>
+            <tr id="CSS_eCO2">
+                <!--Text row 1, line 10-->
+                <td>CSS eCO2:</td>
+                <!--Text row 2, line 10-->
+                <td>400</td>
+            </tr>
+            <tr id="CSS_TVOC">
+                <!--Text row 1, line 11-->
+                <td>CSS TVOC:</td>
+                <!--Text row 2, line 11-->
+                <td>0</td>
+            </tr>
+            <tr id="UV">
+                <!--Text row 1, line 12-->
+                <td>UV:</td>
+                <!--Text row 2, line 12-->
+                <td>0</td>
+            </tr>
+            <tr id="AccelX">
+                <!--Text row 1, line 13-->
+                <td>AccelX:</td>
+                <!--Text row 2, line 13-->
+                <td>-0.87</td>
+            </tr>
+            <tr id="AccelY">
+                <!--Text row 1, line 14-->
+                <td>AccelY:</td>
+                <!--Text row 2, line 14-->
+                <td>-0.02</td>
+            </tr>
+            <tr id="AccelZ">
+                <!--Text row 1, line 15-->
+                <td>AccelZ:</td>
+                <!--Text row 2, line 15-->
+                <td>9.61</td>
+            </tr>
+            <tr id="MagneticX">
+                <!--Text row 1, line 16-->
+                <td>MagneticX:</td>
+                <!--Text row 2, line 16-->
+                <td>0.13</td>
+            </tr>
+            <tr id="MagneticY">
+                <!--Text row 1, line 17-->
+                <td>MagneticY:</td>
+                <!--Text row 2, line 17-->
+                <td>0.57</td>
+            </tr>
+            <tr id="MagneticZ">
+                <!--Text row 1, line 18-->
+                <td>MagneticZ:</td>
+                <!--Text row 2, line 18-->
+                <td>-0.24</td>
+            </tr>
+            <tr id="GyroX">
+                <!--Text row 1, line 19-->
+                <td>GyroX:</td>
+                <!--Text row 2, line 19-->
+                <td>4.66</td>
+            </tr>
+            <tr id="GyroY">
+                <!--Text row 1, line 20-->
+                <td>GyroY:</td>
+                <!--Text row 2, line 20-->
+                <td>0.01</td>
+            </tr>
+            <tr id="GyroZ">
+                <!--Text row 1, line 21-->
+                <td>GyroZ:</td>
+                <!--Text row 2, line 21-->
+                <td>-0.4</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+    <br>
+    <!--button to run timer-->
+    <button onclick="startFun();" class="button" id="startButton">Start</button>
+    <!--Stop Button-->
+    <button onclick="stopFun();" class="button" id="stopButton">Stop</button><br>
+    <br>
+<!--
+For our craps game on the html side, we need:
+    1. Button to play craps
+    2. Craps status line (won or lost)
+    3. Header saying craps played here
+
+The story of our craps game...
+After colonizing Mars humans made the first discovery of an alien spieces.
+After first contact humans attempted to connect through various games involving numbers,
+thinking that the aliens may better understand numbers rather then speech. To the explorers
+surprise the martian species particularly enjoyed craps for its simplistisity and randomness.
+Thus, UAT familiarizes every new cadet with the game of craps,so that in the event a UAT cadet
+should meet our new friends on mars they can enjoy a familar game as a friendly
+introduction ritual.
+-->
+<h2>Please try your hand at Craps!</h2>
+<div id="crapsStatus">Craps Status</div><br>
+<button onclick="playCraps();">Play Craps</button>
+</body>
+
+</html>
